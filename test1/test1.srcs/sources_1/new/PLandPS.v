@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 02/08/2024 11:26:52 PM
+// Create Date: 02/09/2024 10:33:45 AM
 // Design Name: 
-// Module Name: nandGate
+// Module Name: PLandPS
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module nandGate(
-    input a,
-    input b,
+module PLandPS(
+    input a,b,
     output c
-
     );
-    assign c = a & b ;
+    assign c = a&b ;
 endmodule
