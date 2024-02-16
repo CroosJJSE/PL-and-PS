@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Test passed for a=0, b=0
+Test passed for a=1, b=0
+Test passed for a=0, b=1
+Test passed for a=1, b=1
+$finish called at time : 400 ns : File "/home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/sim_1/new/top.v" Line 85
