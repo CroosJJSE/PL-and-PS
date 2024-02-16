@@ -73,6 +73,7 @@ OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 2
 set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache /tmp/.Xil_subi/Vivado-54175-kobal/incrSyn
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -103,10 +104,10 @@ set_property used_in_implementation false [get_files -all /home/subi/codes/vscod
 set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xdc]
 set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -118,14 +119,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/constrs_1/new/andGate.xdc
-set_property used_in_implementation false [get_files /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/constrs_1/new/andGate.xdc]
+read_xdc /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/constrs_1/new/phyConstr.xdc
+set_property used_in_implementation false [get_files /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/constrs_1/new/phyConstr.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/utils_1/imports/synth_1/andGatre.dcp
+read_checkpoint -auto_incremental -incremental /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/utils_1/imports/synth_1/andGate.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

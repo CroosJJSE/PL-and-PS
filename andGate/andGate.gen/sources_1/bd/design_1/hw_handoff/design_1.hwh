@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 16 23:16:46 2024" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 17 00:14:52 2024" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:2.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -109,14 +109,14 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_a">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="andGatre_0" PORT="a"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="External_Ports_b">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="andGatre_0" PORT="b"/>
+        <CONNECTION INSTANCE="andGate_0" PORT="b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_a">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="andGate_0" PORT="a"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="c" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_1_gpio_io_o">
@@ -174,10 +174,10 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="1" FULLNAME="/andGatre_0" HWVERSION="1.0" INSTANCE="andGatre_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="andGatre" VLNV="xilinx.com:module_ref:andGatre:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/andGate_0" HWVERSION="1.0" INSTANCE="andGate_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="andGate" VLNV="xilinx.com:module_ref:andGate:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_andGatre_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_andGate_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -191,7 +191,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="b"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="andGatre_0_c">
+        <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="andGate_0_c">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
           </CONNECTIONS>
@@ -489,9 +489,9 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="andGatre_0_c">
+        <PORT DIR="I" LEFT="0" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="andGate_0_c">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="andGatre_0" PORT="c"/>
+            <CONNECTION INSTANCE="andGate_0" PORT="c"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

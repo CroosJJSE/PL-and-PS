@@ -11,8 +11,8 @@
       "validated": "true"
     },
     "design_tree": {
-      "andGatre_0": "",
       "processing_system7_0": "",
+      "andGate_0": "",
       "axi_gpio_0": "",
       "axi_gpio_1": "",
       "ps7_0_axi_periph": {
@@ -196,10 +196,10 @@
       }
     },
     "ports": {
-      "a": {
+      "b": {
         "direction": "I"
       },
-      "b": {
+      "a": {
         "direction": "I"
       },
       "c": {
@@ -209,28 +209,6 @@
       }
     },
     "components": {
-      "andGatre_0": {
-        "vlnv": "xilinx.com:module_ref:andGatre:1.0",
-        "xci_name": "design_1_andGatre_0_0",
-        "xci_path": "ip/design_1_andGatre_0_0/design_1_andGatre_0_0.xci",
-        "inst_hier_path": "andGatre_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "andGatre",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "a": {
-            "direction": "I"
-          },
-          "b": {
-            "direction": "I"
-          },
-          "c": {
-            "direction": "O"
-          }
-        }
-      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "design_1_processing_system7_0_0",
@@ -2004,6 +1982,28 @@
           }
         }
       },
+      "andGate_0": {
+        "vlnv": "xilinx.com:module_ref:andGate:1.0",
+        "xci_name": "design_1_andGate_0_1",
+        "xci_path": "ip/design_1_andGate_0_1/design_1_andGate_0_1.xci",
+        "inst_hier_path": "andGate_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "andGate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "c": {
+            "direction": "O"
+          }
+        }
+      },
       "axi_gpio_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "design_1_axi_gpio_0_0",
@@ -2472,12 +2472,12 @@
       "a_0_1": {
         "ports": [
           "a",
-          "andGatre_0/a"
+          "andGate_0/a"
         ]
       },
-      "andGatre_0_c": {
+      "andGate_0_c": {
         "ports": [
-          "andGatre_0/c",
+          "andGate_0/c",
           "axi_gpio_0/gpio_io_i"
         ]
       },
@@ -2490,7 +2490,7 @@
       "b_0_1": {
         "ports": [
           "b",
-          "andGatre_0/b"
+          "andGate_0/b"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {

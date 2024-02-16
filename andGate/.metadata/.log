@@ -1,53 +1,224 @@
-!SESSION 2024-02-16 23:22:25.505 -----------------------------------------------
-eclipse.buildId=2022.2
-java.version=11.0.11
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
 
-!ENTRY org.eclipse.osgi 4 0 2024-02-16 23:22:26.076
-!MESSAGE Bundle reference:file:org.apache.log4j_1.2.15.v201012070815.jar not found.
+!ENTRY org.eclipse.core.resources 4 2 2024-02-17 00:53:13.410
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Registry Directory not available: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine/profileRegistry.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:519)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:374)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfiles(SimpleProfileRegistry.java:356)
+	at org.eclipse.pde.internal.core.target.P2TargetUtils.cleanOrphanedTargetDefinitionProfiles(P2TargetUtils.java:175)
+	at org.eclipse.pde.internal.core.PDECore$1.saving(PDECore.java:283)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.osgi 4 0 2024-02-16 23:22:26.107
-!MESSAGE Bundle reference:file:org.slf4j.impl.log4j12_1.7.2.v20131105-2200.jar not found.
+!ENTRY org.eclipse.core.resources 4 568 2024-02-17 00:53:13.414
+!MESSAGE Could not write metadata for '/'.
+!STACK 0
+java.io.FileNotFoundException: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:158)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1765)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.ui 4 4 2024-02-16 23:22:43.031
-!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:13.420
+!MESSAGE XSCT Command: [platform create -name {notGateDummy} -hw {/home/subi/codes/vscode/vivado/PL-and-PS/dummy/design_1_wrapper.xsa} -proc {ps7_cortexa9_0} -os {standalone} -out {/home/subi/codes/vscode/vivado/PL-and-PS/andGate};platform write], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.158
-!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-19
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-17 00:53:13.617
+!MESSAGE Indexed 'notGateDummy' (0 sources, 0 headers) in 0.002 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.158
-!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:22.789
+!MESSAGE XSCT command with result: [platform create -name {notGateDummy} -hw {/home/subi/codes/vscode/vivado/PL-and-PS/dummy/design_1_wrapper.xsa} -proc {ps7_cortexa9_0} -os {standalone} -out {/home/subi/codes/vscode/vivado/PL-and-PS/andGate};platform write], Result: [null, Successfully saved  the platform at "/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/platform.spr"]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.158
-!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-20
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-02-17 00:53:22.858
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.part.IntroPart.dispose(IntroPart.java:99)
+	at org.eclipse.ui.internal.ViewIntroAdapterPart.dispose(ViewIntroAdapterPart.java:153)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.invalidate(CompatibilityPart.java:260)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.destroy(CompatibilityPart.java:417)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.uninject(InjectorImpl.java:200)
+	at org.eclipse.e4.core.internal.di.Requestor.uninject(Requestor.java:176)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:89)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.removeListenersTo(EclipseContext.java:491)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.uninject(ContextInjectionFactory.java:184)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:954)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:873)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:868)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:852)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.disposeWidget(ElementReferenceRenderer.java:115)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:945)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:873)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:868)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:852)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:187)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:314)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1406)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1537)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1496)
+	at org.eclipse.ui.internal.WorkbenchPage.hideView(WorkbenchPage.java:2609)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.closeIntro(WorkbenchIntroManager.java:98)
+	at com.xilinx.sdx.ui.utils.SWTUtils.closeWelcomeView(SWTUtils.java:529)
+	at com.xilinx.sdx.scw.project.ScwProjectCreationHandler$1.run(ScwProjectCreationHandler.java:71)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4930)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4451)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:166)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:368)
+	at org.eclipse.jface.wizard.WizardDialog.run(WizardDialog.java:1033)
+	at com.xilinx.sdx.npw.NewPlatformProjectWizard.createPlatformProject(NewPlatformProjectWizard.java:125)
+	at com.xilinx.sdx.npw.NewPlatformProjectWizard.createPlatformProjectFromDSA(NewPlatformProjectWizard.java:110)
+	at com.xilinx.sdx.npw.NewPlatformProjectWizard.performFinish(NewPlatformProjectWizard.java:80)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:832)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:472)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5687)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1423)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4955)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4448)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at com.xilinx.sdx.npw.OpenSCWWizardAction.run(OpenSCWWizardAction.java:23)
+	at com.xilinx.sdx.npw.OpenSCWWizardAction.clicked(OpenSCWWizardAction.java:40)
+	at com.xilinx.ide.product.intro.IDEIntroPart.createPlatformProject(IDEIntroPart.java:479)
+	at com.xilinx.ide.product.intro.IDEIntroPart$4.run(IDEIntroPart.java:279)
+	at com.xilinx.ide.product.intro.IDEIntroPart$12.mouseUp(IDEIntroPart.java:402)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:224)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5687)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1423)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4955)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1420)
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.162
-!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:23.149
+!MESSAGE XSCT Command: [platform read {/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/platform.spr}], Thread: Worker-12: Initializing the platform to enable editing
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.163
-!MESSAGE XSCT Command: [setws /home/subi/codes/vscode/vivado/PL-and-PS/andGate], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:23.164
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/hw/design_1_wrapper.xsa], Thread: Worker-18: Initializing hardware specification UI...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.291
-!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:26.023
+!MESSAGE XSCT command with result: [platform read {/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/platform.spr}], Result: [null, ]. Thread: Worker-12: Initializing the platform to enable editing
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.291
-!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-20
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:26.023
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: Worker-18: Initializing hardware specification UI...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.291
-!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-0: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:26.024
+!MESSAGE XSCT Command: [platform active {notGateDummy}], Thread: Worker-12: Initializing the platform to enable editing
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.292
-!MESSAGE XSCT command with result: [setws /home/subi/codes/vscode/vivado/PL-and-PS/andGate], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:26.024
+!MESSAGE XSCT Command: [::hsi::utils::closehw /tmp/hwspec_design_1_wrapper12868792900542646019/design_1_wrapper.xsa], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:22:48.293
-!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, /tools/Xilinx/Vitis/2022.2/data]. Thread: Worker-0: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:26.025
+!MESSAGE XSCT command with result: [platform active {notGateDummy}], Result: [null, ]. Thread: Worker-12: Initializing the platform to enable editing
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:23:26.850
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:53:26.058
+!MESSAGE XSCT command with result: [::hsi::utils::closehw /tmp/hwspec_design_1_wrapper12868792900542646019/design_1_wrapper.xsa], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.core.resources 4 2 2024-02-17 00:58:13.541
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Registry Directory not available: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine/profileRegistry.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:519)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:374)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfiles(SimpleProfileRegistry.java:356)
+	at org.eclipse.pde.internal.core.target.P2TargetUtils.cleanOrphanedTargetDefinitionProfiles(P2TargetUtils.java:175)
+	at org.eclipse.pde.internal.core.PDECore$1.saving(PDECore.java:283)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2024-02-17 00:58:13.550
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:158)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1765)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1846)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:50.354
 !MESSAGE XSCT Command: [::hsi::utils::get_all_app_details -json], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:23:26.865
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:50.375
 !MESSAGE XSCT command with result: [::hsi::utils::get_all_app_details -json], Result: [null, {"versal_psmfw": {"userdefname": "versal PSM Firmware",
 "description": "Processing System Management Unit Firmware for versal.",
 "supp_proc": "psu_psm psv_psm psxl_psm psx_psm",
@@ -378,42 +549,254 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:23:26.915
-!MESSAGE XSCT Command: [::hsi::utils::openhw /tmp/hwspec_hw12164552152043564800/hw.xsa], Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:50.378
+!MESSAGE XSCT Command: [::hsi::utils::openhw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:23:34.038
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /tmp/hwspec_hw12164552152043564800/hw.xsa], Result: [null, ]. Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:52.255
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa], Result: [null, ]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:23:58.562
-!MESSAGE XSCT Command: [::hsi::utils::closehw /tmp/hwspec_hw12164552152043564800/hw.xsa], Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:52.256
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:23:58.569
-!MESSAGE XSCT command with result: [::hsi::utils::closehw /tmp/hwspec_hw12164552152043564800/hw.xsa], Result: [null, ]. Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:52.270
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa], Result: [null, {"andGate_0": {"hier_name": "andGate_0",
+"type": "andGate",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"rst_ps7_0_100M": {"hier_name": "rst_ps7_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 1 0 2024-02-16 23:24:16.413
-!MESSAGE Opening file dialog using preferences. Current path: /tools/Xilinx/Vitis/2022.2/data/embeddedsw/lib/fixed_hwplatforms, Local preference: scw_hwspec, Group preference: null
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:52.278
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:24:34.579
-!MESSAGE XSCT Command: [::hsi::utils::openhw /tmp/hwspec_design_1_wrapper11452799636153609116/design_1_wrapper.xsa], Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:53.915
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:24:34.593
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /tmp/hwspec_design_1_wrapper11452799636153609116/design_1_wrapper.xsa], Result: [{Format=ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
-, Time=1708106074592, Code=1}, ]. Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:53.916
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 1 0 2024-02-16 23:26:01.976
-!MESSAGE Opening file dialog using preferences. Current path: /tools/Xilinx/Vitis/2022.2/data/embeddedsw/lib/fixed_hwplatforms, Local preference: scw_hwspec, Group preference: null
-
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:19.962
-!MESSAGE XSCT Command: [::hsi::utils::openhw /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:21.722
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Result: [null, ]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:21.727
-!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:21.737
-!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Result: [null, {"andGate_0": {"hier_name": "andGate_0",
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:53.931
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Result: [null, {"andGate_0": {"hier_name": "andGate_0",
 "type": "andGate",
 "version": "1.0",
 "ip_type": "PERIPHERAL",
@@ -640,11 +1023,38 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:21.761
-!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:53.935
+!MESSAGE XSCT Command: [::hsi::utils::is_app_supported_on_hw_sw  -hw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/sw/notGateDummy/standalone_domain/system.mss -arch {}], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:21.773
-!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Result: [null, {"ps7_cortexa9_0": {"freertos10_xilinx_v1_12": {"name": "freertos10_xilinx",
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:53.941
+!MESSAGE XSCT command with result: [::hsi::utils::is_app_supported_on_hw_sw  -hw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/sw/notGateDummy/standalone_domain/system.mss -arch {}], Result: [null, 1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:53.943
+!MESSAGE XSCT Command: [::hsi::utils::is_app_supported_on_hw_sw  -hw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/sw/notGateDummy/standalone_domain/system.mss -arch {}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:53.949
+!MESSAGE XSCT command with result: [::hsi::utils::is_app_supported_on_hw_sw  -hw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/sw/notGateDummy/standalone_domain/system.mss -arch {}], Result: [null, 1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:58.777
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:58.779
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:58.780
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:58.782
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.400
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.411
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Result: [null, {"ps7_cortexa9_0": {"freertos10_xilinx_v1_12": {"name": "freertos10_xilinx",
 "version": "1.12",
 "desc": "This Xilinx FreeRTOS port is based on FreeRTOS kernel version 10.4.6",
 "compilerflags": "",
@@ -674,21 +1084,745 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 "repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/lib/bsp/standalone_v8_0",
 },
 },
-}]. Thread: main
+}]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:21.776
-!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.412
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:21.778
-!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Result: [null, {"device": "7z010",
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.415
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.416
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.418
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, {}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.419
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa ps7_cortexa9_0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.421
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa ps7_cortexa9_0], Result: [null, axi_gpio_0 axi_gpio_1 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_ttc_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.422
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.426
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.9",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.9",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.8",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.2",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.7",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.8",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.8",
+},
+"ps7_ethernet_0": {"name": "emacps",
+"ver": "3.17",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.10",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.10",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "5.0",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.4",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.4",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "4.0",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "3.1",
+},
+"ps7_ttc_0": {"name": "ttcps",
+"ver": "3.16",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.11",
+},
+"ps7_usb_0": {"name": "usbps",
+"ver": "2.7",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.6",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.11",
+},
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.428
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.587
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Result: [null, {"andGate_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"axi_gpio_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"gpio_v4_9": {"name": "gpio",
+"version": "4.9",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_9",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_gpio_1": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"gpio_v4_9": {"name": "gpio",
+"version": "4.9",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_9",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"processing_system7_0": {"version": "5.5",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_0_axi_periph": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"rst_ps7_0_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_clockc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_uart_1": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"uartps_v3_11": {"name": "uartps",
+"version": "3.11",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/uartps_v3_11",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_pl310_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_pmu_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_qspi_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"qspips_v3_10": {"name": "qspips",
+"version": "3.10",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/qspips_v3_10",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_qspi_linear_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_axi_interconnect_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_cortexa9_0": {"version": "5.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"cpu_cortexa9_v2_11": {"name": "cpu_cortexa9",
+"version": "2.11",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_cortexa9_v2_11",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_cortexa9_1": {"version": "5.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"cpu_cortexa9_v2_11": {"name": "cpu_cortexa9",
+"version": "2.11",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_cortexa9_v2_11",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ddr_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"ddrps_v1_2": {"name": "ddrps",
+"version": "1.2",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ddrps_v1_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ethernet_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"emacps_v3_17": {"name": "emacps",
+"version": "3.17",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/emacps_v3_17",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_usb_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"usbps_v2_7": {"name": "usbps",
+"version": "2.7",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/usbps_v2_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_sd_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"sdps_v4_0": {"name": "sdps",
+"version": "4.0",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/sdps_v4_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ttc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"ttcps_v3_16": {"name": "ttcps",
+"version": "3.16",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ttcps_v3_16",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_gpio_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"gpiops_v3_10": {"name": "gpiops",
+"version": "3.10",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/gpiops_v3_10",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ddrc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_dev_cfg_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"devcfg_v3_7": {"name": "devcfg",
+"version": "3.7",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/devcfg_v3_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_xadc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"xadcps_v2_6": {"name": "xadcps",
+"version": "2.6",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/xadcps_v2_6",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ocmc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_coresight_comp_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"coresightps_dcc_v1_8": {"name": "coresightps_dcc",
+"version": "1.8",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/coresightps_dcc_v1_8",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_gpv_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_scuc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_globaltimer_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_intc_dist_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_l2cachec_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_dma_s": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"dmaps_v2_8": {"name": "dmaps",
+"version": "2.8",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/dmaps_v2_8",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_iop_bus_config_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_ram_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_ram_1": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_scugic_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"scugic_v5_0": {"name": "scugic",
+"version": "5.0",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/scugic_v5_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_scutimer_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"scutimer_v2_4": {"name": "scutimer",
+"version": "2.4",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/scutimer_v2_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_scuwdt_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"scuwdt_v2_4": {"name": "scuwdt",
+"version": "2.4",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/scuwdt_v2_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_slcr_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_dma_ns": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+"dmaps_v2_8": {"name": "dmaps",
+"version": "2.8",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/dmaps_v2_8",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_afi_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_afi_1": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_afi_2": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_afi_3": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+"ps7_m_axi_gp0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "3.0 3.1",
+"repo": "/tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /tools/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
+},
+},
+},
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.590
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.592
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.592
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.594
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, {}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.629
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.630
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.631
+!MESSAGE XSCT Command: [::hsi::utils::opensw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.632
+!MESSAGE XSCT command with result: [::hsi::utils::opensw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.633
+!MESSAGE XSCT Command: [::hsi::utils::generate_app_template -hw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa -sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss -app hello_world -processor ps7_cortexa9_0 -os standalone -dir /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/src], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.676
+!MESSAGE XSCT command with result: [::hsi::utils::generate_app_template -hw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa -sw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss -app hello_world -processor ps7_cortexa9_0 -os standalone -dir /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/src], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.728
+!MESSAGE XSCT Command: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/_ide/bitstream}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.740
+!MESSAGE XSCT command with result: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/_ide/bitstream}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.740
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.742
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/hw/design_1_wrapper.xsa], Result: [null, {"device": "7z010",
 "family": "zynq",
-"timestamp": "Mon Feb 12 19:47:54 2024",
+"timestamp": "Sat Feb 17 00:37:03 2024",
 "vivado_version": "2022.2",
 "part": "xc7z010clg400-1",
-}]. Thread: main
+}]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:30.587
-!MESSAGE XSCT Command: [::hsi::utils::closehw /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 00:59:59.743
+!MESSAGE XSCT Command: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/_ide/psinit} -quiet], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2024-02-16 23:26:30.613
-!MESSAGE XSCT command with result: [::hsi::utils::closehw /tmp/hwspec_NandPLandPS_wrapper14628316801029549406/NandPLandPS_wrapper.xsa], Result: [null, ]. Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 01:00:05.056
+!MESSAGE XSCT command with result: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/_ide/psinit} -quiet], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 01:00:05.256
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 01:00:05.261
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-02-17 01:00:05.301
+!MESSAGE Generating MD5 hash for file: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/sw/notGateDummy/standalone_domain/system.mss ...
+
+!ENTRY org.eclipse.core.resources 4 2 2024-02-17 01:00:05.413
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Registry Directory not available: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine/profileRegistry.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:519)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:374)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfiles(SimpleProfileRegistry.java:356)
+	at org.eclipse.pde.internal.core.target.P2TargetUtils.cleanOrphanedTargetDefinitionProfiles(P2TargetUtils.java:175)
+	at org.eclipse.pde.internal.core.PDECore$1.saving(PDECore.java:283)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2024-02-17 01:00:05.415
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:158)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1765)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1846)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-17 01:00:05.627
+!MESSAGE Indexed 'notGate_system' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 01:00:05.733
+!MESSAGE XSCT Command: [::hsi::utils::closehw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-17 01:00:05.756
+!MESSAGE XSCT command with result: [::hsi::utils::closehw /tmp/hwspec_design_1_wrapper3069589512198236232/design_1_wrapper.xsa], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-17 01:00:05.773
+!MESSAGE Indexed 'notGate' (2 sources, 55 headers) in 0.143 sec: 1,479 declarations; 2,080 references; 0 unresolved inclusions; 3 syntax errors; 9 unresolved names (0.25%)
+
+!ENTRY org.eclipse.core.resources 4 2 2024-02-17 01:01:39.098
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Registry Directory not available: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine/profileRegistry.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:519)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:374)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfiles(SimpleProfileRegistry.java:356)
+	at org.eclipse.pde.internal.core.target.P2TargetUtils.cleanOrphanedTargetDefinitionProfiles(P2TargetUtils.java:175)
+	at org.eclipse.pde.internal.core.PDECore$1.saving(PDECore.java:283)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2333)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:509)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.core.resources 4 566 2024-02-17 01:01:39.105
+!MESSAGE Could not save master table to file '/home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak'.
+!STACK 0
+java.io.FileNotFoundException: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:158)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1265)
+	at org.eclipse.core.internal.resources.SaveManager.cleanMasterTable(SaveManager.java:240)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1173)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2333)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:509)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-02-17 01:02:10.198
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2024-02-17 01:02:10.198
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2024-02-17 01:02:10.198
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/subi/codes/vscode/vivado/PL-and-PS/andGate/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:187)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:55)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1657)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1736)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1177)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2333)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:509)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)

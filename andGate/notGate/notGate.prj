@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="notGate" location="/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGate" platform="/home/subi/codes/vscode/vivado/PL-and-PS/andGate/notGateDummy/export/notGateDummy/notGateDummy.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="notGate_system" sysConfig="notGateDummy" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="78d4b2f791df622e51ec5e5290b61b21">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.253131262" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1556197427" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

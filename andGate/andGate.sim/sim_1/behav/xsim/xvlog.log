@@ -1,6 +1,6 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/sources_1/new/andGatre.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module andGatre
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/sim_1/new/top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/sources_1/new/andGate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andGate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

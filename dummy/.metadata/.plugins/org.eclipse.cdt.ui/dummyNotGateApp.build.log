@@ -1,0 +1,43 @@
+01:43:33 **** Incremental Build of configuration Debug for project dummyNotGateApp ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from /home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bspinclude/include/xil_printf.h:16,
+                 from /home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bspinclude/include/xil_io.h:49,
+                 from /home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bspinclude/include/xgpio_l.h:61,
+                 from /home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bspinclude/include/xgpio.h:117,
+                 from ../src/helloworld.c:3:
+../src/helloworld.c: In function 'main':
+/home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bspinclude/include/xparameters.h:266:34: warning: unsigned conversion from 'int' to 'u16' {aka 'short unsigned int'} changes value from '1092616192' to '0' [-Woverflow]
+  266 | #define XPAR_AXI_GPIO_0_BASEADDR 0x41200000
+      |                                  ^~~~~~~~~~
+../src/helloworld.c:18:30: note: in expansion of macro 'XPAR_AXI_GPIO_0_BASEADDR'
+   18 |     XGpio_Initialize(&input, XPAR_AXI_GPIO_0_BASEADDR );
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bspinclude/include/xparameters.h:274:34: warning: unsigned conversion from 'int' to 'u16' {aka 'short unsigned int'} changes value from '1092681728' to '0' [-Woverflow]
+  274 | #define XPAR_AXI_GPIO_1_BASEADDR 0x41210000
+      |                                  ^~~~~~~~~~
+../src/helloworld.c:19:31: note: in expansion of macro 'XPAR_AXI_GPIO_1_BASEADDR'
+   19 |     XGpio_Initialize(&output, XPAR_AXI_GPIO_1_BASEADDR );
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: dummyNotGateApp.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/subi/codes/vscode/vivado/PL-and-PS/dummy/dummyNotGate/export/dummyNotGate/sw/dummyNotGate/standalone_domain/bsplib/lib -o "dummyNotGateApp.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: dummyNotGateApp.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size dummyNotGateApp.elf  |tee "dummyNotGateApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23465	   1176	  22584	  47225	   b879	dummyNotGateApp.elf
+Finished building: dummyNotGateApp.elf.size
+ 
+
+01:43:34 Build Finished (took 329ms)
+

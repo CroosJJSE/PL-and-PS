@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Fri Feb 16 23:16:30 2024
+//Date        : Sat Feb 17 00:14:36 2024
 //Host        : kobal running 64-bit Ubuntu 22.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -61,7 +61,7 @@ module design_1
   output [0:0]c;
 
   wire a_0_1;
-  wire andGatre_0_c;
+  wire andGate_0_c;
   wire [0:0]axi_gpio_1_gpio_io_o;
   wire b_0_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
@@ -164,12 +164,12 @@ module design_1
   assign a_0_1 = a;
   assign b_0_1 = b;
   assign c[0] = axi_gpio_1_gpio_io_o;
-  design_1_andGatre_0_0 andGatre_0
+  design_1_andGate_0_1 andGate_0
        (.a(a_0_1),
         .b(b_0_1),
-        .c(andGatre_0_c));
+        .c(andGate_0_c));
   design_1_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_i(andGatre_0_c),
+       (.gpio_io_i(andGate_0_c),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),

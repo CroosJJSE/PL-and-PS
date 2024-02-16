@@ -128,6 +128,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 2
   set_param checkpoint.writeSynthRtdsInDcp 1
+  set_param synth.incrementalSynthesisCache /tmp/.Xil_subi/Vivado-54175-kobal/incrSyn
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
@@ -148,7 +149,7 @@ OPTRACE "add files" START { }
   add_files /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/constrs_1/new/andGate.xdc
+  read_xdc /home/subi/codes/vscode/vivado/PL-and-PS/andGate/andGate.srcs/constrs_1/new/phyConstr.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

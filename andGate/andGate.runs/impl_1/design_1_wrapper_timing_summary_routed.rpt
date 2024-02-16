@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Feb 16 23:19:49 2024
+| Date         : Sat Feb 17 00:17:54 2024
 | Host         : kobal running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : design_1_wrapper
@@ -1406,7 +1406,7 @@ Min Delay             2 Endpoints
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 b
+  Source:                 a
                             (input port)
   Destination:            design_1_i/axi_gpio_0/U0/gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
@@ -1427,11 +1427,11 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P15                                               0.000     0.000 r  b (IN)
-                         net (fo=0)                   0.000     0.000    b
-    P15                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  b_IBUF_inst/O
-                         net (fo=1, routed)           2.121     3.572    design_1_i/andGatre_0/b
-    SLICE_X43Y36         LUT2 (Prop_lut2_I1_O)        0.124     3.696 r  design_1_i/andGatre_0/c_INST_0/O
+    P15                                               0.000     0.000 r  a (IN)
+                         net (fo=0)                   0.000     0.000    a
+    P15                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  a_IBUF_inst/O
+                         net (fo=1, routed)           2.121     3.572    design_1_i/andGate_0/a
+    SLICE_X43Y36         LUT2 (Prop_lut2_I0_O)        0.124     3.696 r  design_1_i/andGate_0/c_INST_0/O
                          net (fo=1, routed)           1.340     5.036    design_1_i/axi_gpio_0/U0/gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/gpio_io_i[0]
     SLICE_X14Y36         FDRE                                         r  design_1_i/axi_gpio_0/U0/gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to/D
   -------------------------------------------------------------------    -------------------
@@ -1517,7 +1517,7 @@ Slack:                    inf
     SLICE_X18Y36         FDRE                                         r  design_1_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
 
 Slack:                    inf
-  Source:                 a
+  Source:                 b
                             (input port)
   Destination:            design_1_i/axi_gpio_0/U0/gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
@@ -1533,11 +1533,11 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    G15                                               0.000     0.000 r  a (IN)
-                         net (fo=0)                   0.000     0.000    a
-    G15                  IBUF (Prop_ibuf_I_O)         0.220     0.220 r  a_IBUF_inst/O
-                         net (fo=1, routed)           0.784     1.004    design_1_i/andGatre_0/a
-    SLICE_X43Y36         LUT2 (Prop_lut2_I0_O)        0.045     1.049 r  design_1_i/andGatre_0/c_INST_0/O
+    G15                                               0.000     0.000 r  b (IN)
+                         net (fo=0)                   0.000     0.000    b
+    G15                  IBUF (Prop_ibuf_I_O)         0.220     0.220 r  b_IBUF_inst/O
+                         net (fo=1, routed)           0.784     1.004    design_1_i/andGate_0/b
+    SLICE_X43Y36         LUT2 (Prop_lut2_I1_O)        0.045     1.049 r  design_1_i/andGate_0/c_INST_0/O
                          net (fo=1, routed)           0.626     1.675    design_1_i/axi_gpio_0/U0/gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/gpio_io_i[0]
     SLICE_X14Y36         FDRE                                         r  design_1_i/axi_gpio_0/U0/gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to/D
   -------------------------------------------------------------------    -------------------
